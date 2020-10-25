@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        button {
+            margin-right: 10px;
+        }
+    }
+
+}
