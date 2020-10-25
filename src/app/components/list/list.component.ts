@@ -1,9 +1,11 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from 'src/app/services/user.service';
 import User from '../../models/User';
+import { ReadComponent } from '../read/read.component';
 
 @Component({
   selector: 'app-list',
@@ -18,7 +20,8 @@ export class ListComponent implements AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private _bottomSheet: MatBottomSheet
   ) {
     this.getUsers();
   }
@@ -48,5 +51,9 @@ export class ListComponent implements AfterViewInit {
     }
 
     this.dataSource = new MatTableDataSource(users);
+  }
+
+  openReadBottomSheet(row): void {
+    this._bottomSheet.open(ReadComponent, { data: row });
   }
 }

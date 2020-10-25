@@ -8,12 +8,14 @@ import { NewComponent } from './components/new/new.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { ListComponent } from './components/list/list.component';
+import { ReadComponent } from './components/read/read.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewComponent,
-    ListComponent
+    ListComponent,
+    ReadComponent
   ],
   imports: [
     BrowserModule,

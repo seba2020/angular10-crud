@@ -9,6 +9,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -21,6 +23,8 @@ const MATERIAL = [
   MatPaginatorModule,
   MatToolbarModule,
   MatIconModule,
+  MatBottomSheetModule,
+  MatListModule,
 
 ];
 
