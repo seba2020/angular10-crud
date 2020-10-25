@@ -7,6 +7,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+
 
 
 const MATERIAL = [
@@ -16,6 +19,8 @@ const MATERIAL = [
   MatSnackBarModule,
   MatTableModule,
   MatPaginatorModule,
+  MatToolbarModule,
+  MatIconModule,
 
 ];
 

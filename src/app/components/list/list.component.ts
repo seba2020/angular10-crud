@@ -11,7 +11,7 @@ import User from '../../models/User';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements AfterViewInit {
-  displayedColumns: string[] = ['name', 'lastname', 'username', 'email'];
+  displayedColumns: string[] = ['name', 'lastname', 'username', 'email', 'id'];
   dataSource: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

@@ -11,3 +11,24 @@ td,
 th {
   width: 25%;
 }
+
+.mat-form-field {
+  max-width: 500px;
+}
+
+.header__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row__icon {
+  display: flex;
+
+  span {
+    color: #3f51b5;
+    margin: 5px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
