@@ -9,13 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { ListComponent } from './components/list/list.component';
 import { ReadComponent } from './components/read/read.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewComponent,
     ListComponent,
-    ReadComponent
+    ReadComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +25,9 @@ import { ReadComponent } from './components/read/read.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MaterialModule
+  ],
+  entryComponents: [
+    UpdateComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

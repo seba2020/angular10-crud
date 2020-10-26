@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
@@ -6,6 +6,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { UserService } from 'src/app/services/user.service';
 import User from '../../models/User';
 import { ReadComponent } from '../read/read.component';
+import { MatDialog } from '@angular/material/dialog';
+import { UpdateComponent } from '../update/update.component';
 
 @Component({
   selector: 'app-list',
@@ -21,7 +23,8 @@ export class ListComponent implements AfterViewInit {
 
   constructor(
     private userService: UserService,
-    private _bottomSheet: MatBottomSheet
+    private bottomSheet: MatBottomSheet,
+    public dialog: MatDialog
   ) {
     this.getUsers();
   }
@@ -54,6 +57,16 @@ export class ListComponent implements AfterViewInit {
   }
 
   openReadBottomSheet(row): void {
-    this._bottomSheet.open(ReadComponent, { data: row });
+    this.bottomSheet.open(ReadComponent, { data: row });
+  }
+
+  openEditDialog(row): void {
+    const dialogRef = this.dialog.open(UpdateComponent, {
+      data: row
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+    });
   }
 }
