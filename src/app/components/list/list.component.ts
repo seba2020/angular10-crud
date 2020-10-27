@@ -8,6 +8,7 @@ import User from '../../models/User';
 import { ReadComponent } from '../read/read.component';
 import { MatDialog } from '@angular/material/dialog';
 import { UpdateComponent } from '../update/update.component';
+import { DeleteComponent } from '../delete/delete.component';
 
 @Component({
   selector: 'app-list',
@@ -68,5 +69,9 @@ export class ListComponent implements AfterViewInit {
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed', result);
     });
+  }
+
+  openDeleteBottomSheet(row): void {
+    this.bottomSheet.open(DeleteComponent, { data: row });
   }
 }

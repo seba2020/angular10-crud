@@ -10,6 +10,7 @@ import { MaterialModule } from './material.module';
 import { ListComponent } from './components/list/list.component';
 import { ReadComponent } from './components/read/read.component';
 import { UpdateComponent } from './components/update/update.component';
+import { DeleteComponent } from './components/delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UpdateComponent } from './components/update/update.component';
     NewComponent,
     ListComponent,
     ReadComponent,
-    UpdateComponent
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
