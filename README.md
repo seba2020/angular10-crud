@@ -1,5 +1,12 @@
 # Crud Angular v10 - Angular Material v10
 
+## Screenshots
+
+Code in action:
+
+![Alt Text](https://i.imgur.com/7gpCGQ5.gif)
+
+
 Data persistente en localStorage, uso de uuid para simular ID desde backend, creacion de servicios utilizando interfaces
 
 ## Librerias usadas:
